@@ -33,7 +33,7 @@
 }
 
 body {
-    @include scroll();
+    @include scroll($bg: $primaryLight, $bar: $secondary, $size: 2px);
     overflow-x: hidden;
     background: $primaryDark;
 }

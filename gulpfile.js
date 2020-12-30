@@ -38,8 +38,9 @@ var jsLibraries__files = [
     '_libraries/laures/laures.js',
     '_libraries/fancybox/jquery.fancybox.min.js',
     '_libraries/swiper/swiper.min.js',
-    //'_libraries/splide/splide.min.js',
     '_libraries/aos/aos.js',
+    '_libraries/select2/dist/js/select2.js',
+    '_libraries/select2/dist/js/i18n/pt-BR.js',
 ];
 gulp.task('jsLibraries', function(done) {
     gulp.src(jsLibraries__files)
@@ -53,9 +54,8 @@ gulp.task('jsLibraries', function(done) {
 var cssLibraries__files = [
     '_libraries/fancybox/jquery.fancybox.min.css',
     '_libraries/swiper/swiper.min.css',
-    //'_libraries/splide/splide.min.css',
-    //'_libraries/splide/splide-skyblue.min.css',
     '_libraries/aos/aos.css',
+    '_libraries/select2/dist/css/select2.min.css',
 ];
 gulp.task('cssLibraries', function(done) {
     gulp.src(cssLibraries__files)

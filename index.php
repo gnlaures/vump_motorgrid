@@ -1,9 +1,9 @@
 <?php
 	include("components/_head.php");
+	include('components/m-modal__menu.php');
+	include('components/m-modal__search.php');
 	include("components/l-nav.php");
-
 	include($file);
-
 	include("components/l-footer.php");
 	include("components/_end.php");
 ?>

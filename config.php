@@ -15,9 +15,29 @@
 	$classOnBody = 'p-inner';
 	
 	switch ($pagina) {
-		case 'componentslist':
-			$file = 'page_components.php';
+		case 'boilerplate':
+			$file = '__boilerplateComponents/index.php';
 			$title_page = 'Components - '.$title;
+			break;
+		case 'boilerplate_forms':
+			$file = '__boilerplateComponents/page_forms.php';
+			$title_page = 'Form - '.$title;
+			break;
+		case 'boilerplate_lists':
+			$file = '__boilerplateComponents/page_lists.php';
+			$title_page = 'Lists - '.$title;
+			break;
+		case 'boilerplate_btns':
+			$file = '__boilerplateComponents/page_btns.php';
+			$title_page = 'Buttons - '.$title;
+			break;
+		case 'boilerplate_menus':
+			$file = '__boilerplateComponents/page_menus.php';
+			$title_page = 'Menus e Sub Menus - '.$title;
+			break;
+		case 'boilerplate_grids':
+			$file = '__boilerplateComponents/page_tabs.php';
+			$title_page = 'Grids e Tabs - '.$title;
 			break;
 
 		case 'single':

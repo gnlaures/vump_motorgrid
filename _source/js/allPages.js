@@ -15,88 +15,73 @@ if (is.not.ie()) {
     $('*').removeAttr("data-aos");
 }
 
+// m
+if ($('.m-defaultModal').length) {
+    // open
+    $('.js-openModal').on('click', function(e) {
+        e.preventDefault();
+        var thisHref = $(this).attr('href');
+        console.log(thisHref)
+        $(thisHref).addClass('is-active');
+    });
+
+    $('.m-defaultModal__close').on('click', function() {
+       $('.m-defaultModal').removeClass('is-active');
+    });
+}
+
 // l
 if ($('.l-nav').length) {
-    var propsNav = {
-        active: 'is-active',
+    var isActive = 'is-active';
+    var navEl = {
         scrollInit: 0,
         scrollClassScrolled: 99,
         scrollClassMiddle: 600,
         body: $('body'),
         nav: $('.l-nav'),
+        navHidden: $('.l-navHidden'),
         hamburguer: $('.l-nav .c-hamburguer'),
         contentHero: $('.l-nav__contentHero'),
-        mask: $('.l-nav__maskMenu'),
-        maskAll: $('.l-nav__maskMenu.maskAll'),
+        mask: $('.l-navHidden__mask')
     };
 
     function checkResponsiveMode() {
         var resultCheck;
-        var displayCheck = propsNav.hamburguer.css('display');
+        var displayCheck = navEl.hamburguer.css('display');
         if (displayCheck !== 'none') {
             resultCheck = 'is-responsive';
-            propsNav.nav.removeClass('is-desktop');
-            propsNav.nav.addClass('is-responsive');
+            navEl.nav.removeClass('is-desktop');
+            navEl.nav.addClass('is-responsive');
         } else {
             resultCheck = 'is-desktop';
-            propsNav.nav.removeClass('is-responsive');
-            propsNav.nav.addClass('is-desktop');
+            navEl.nav.removeClass('is-responsive');
+            navEl.nav.addClass('is-desktop');
         }
         return resultCheck;
     }
-    function closeAllSubMenus() {
+
+    function closeAllNavElements() {
         $('.c-subMenu').removeClass('is-active');
-    }
-    function closeResponsiveMenu() {
-        propsNav.hamburguer.removeClass(propsNav.active);
-        propsNav.contentHero.removeClass(propsNav.active);
-    }
-    function hideMaskMenu() {
-        propsNav.mask.removeClass(propsNav.active);
+        navEl.hamburguer.removeClass(isActive);
     }
     function disableOverflow() {
-        propsNav.body.addClass('u-overflowBlocked');
+        navEl.body.addClass('u-overflowBlocked');
     }
     function enableOverflow() {
-        propsNav.body.removeClass('u-overflowBlocked');
+        navEl.body.removeClass('u-overflowBlocked');
     }
 
 
     // RESPONSIVE MENU
-    // - open / close
-    propsNav.hamburguer.on('click', function() {
-        if ($(this).hasClass(propsNav.active)) {
-            // close menu
-            enableOverflow();
-            $(this).removeClass(propsNav.active);
-            propsNav.maskAll.removeClass(propsNav.active);
-            propsNav.contentHero.removeClass(propsNav.active);
-        } else {
-            // open menu
-            disableOverflow();
-            $(this).addClass(propsNav.active);
-            propsNav.maskAll.addClass(propsNav.active);
-            propsNav.contentHero.addClass(propsNav.active);
-        }
+    // - open
+    navEl.hamburguer.on('click', function() {
+        navEl.navHidden.addClass(isActive);
+        disableOverflow();
     });
-    // - close
-    propsNav.maskAll.on('click', function(){
-        closeResponsiveMenu();
-        hideMaskMenu();
-        closeAllSubMenus();
+    navEl.mask.on('click', function() {
+        navEl.navHidden.removeClass(isActive);
+        navEl.hamburguer.removeClass(isActive);
         enableOverflow();
-    });
-
-
-    // RESPONSIVE MODE
-    $(window).on('resize', function() {
-        if (checkResponsiveMode() === "is-desktop") {
-            if (propsNav.contentHero.hasClass(propsNav.active)) {
-                closeAllSubMenus();
-                closeResponsiveMenu();
-                hideMaskMenu();
-            }
-        }
     });
 
 
@@ -105,110 +90,142 @@ if ($('.l-nav').length) {
         checkResponsiveMode();
         var scrollBody = $(this).scrollTop();
         if (scrollBody > 1) {
-            propsNav.nav.addClass('scrolled');
+            navEl.nav.addClass('is-scrolled');
         } else {
-            propsNav.nav.removeClass('scrolled');
+            navEl.nav.removeClass('is-scrolled');
         }
     });
     $(window).on('scroll', function() {
         var scrollBody = $(this).scrollTop();
         // scroll up to 99
-        if (scrollBody > propsNav.scrollClassScrolled) {
-            propsNav.nav.addClass('scrolled');
+        if (scrollBody > navEl.scrollClassScrolled) {
+            navEl.nav.addClass('is-scrolled');
         } else {
-            propsNav.nav.removeClass('scrolled');
+            navEl.nav.removeClass('is-scrolled');
         }
         // middle class
-        if (scrollBody > propsNav.scrollClassMiddle) {
-            propsNav.nav.addClass('hidden');
-            propsNav.nav.addClass('scrolledMiddle');
+        if (scrollBody > navEl.scrollClassMiddle) {
+            navEl.nav.addClass('is-hidden');
+            navEl.nav.addClass('is-middle');
         } else {
-            propsNav.nav.removeClass('hidden');
-            propsNav.nav.removeClass('scrolledMiddle');
+            navEl.nav.removeClass('is-hidden');
+            navEl.nav.removeClass('is-middle');
         }
         // scroll up or down
-        if (scrollBody < propsNav.scrollInit) {
-            propsNav.nav.removeClass('hidden');
-            propsNav.nav.addClass('scrolledUp');
-            propsNav.nav.removeClass('scrolledDown');
+        if (scrollBody < navEl.scrollInit) {
+            navEl.nav.removeClass('is-hidden');
+            navEl.nav.addClass('is-scrolledUp');
+            navEl.nav.removeClass('is-scrolledDown');
         } else {
-            propsNav.nav.removeClass('scrolledUp');
-            propsNav.nav.addClass('scrolledDown');
+            navEl.nav.removeClass('is-scrolledUp');
+            navEl.nav.addClass('is-scrolledDown');
         }
         // close menus on hidden nav
-        if(propsNav.nav.hasClass('hidden')) {
-            closeAllSubMenus();
-            hideMaskMenu();
+        if(navEl.nav.hasClass('is-hidden')) {
+            closeAllNavElements();
         }
         // reference var
-        propsNav.scrollInit = scrollBody;
+        navEl.scrollInit = scrollBody;
     });
 
 }
 if ($('.l-headerHome').length) {
-    var swiper__headerHome = new Swiper ('.swiper__headerHome', {
-        speed: 400,
-        spaceBetween: 0,
-        pagination: {
-            el: '.swiper-pagination',
-            type: 'bullets',
-            clickable: true,
-        },
-    })
+    $( document ).ready(function() {
+        var headerHome__swiper = new Swiper ('.l-headerHome__swiper', {
+            speed: 400,
+            spaceBetween: 0,
+            autoplay: {
+                delay: 5000,
+            },
+            pagination: {
+                el: '.l-headerHome__pagination',
+                clickable: true,
+                renderBullet: function (index, className) {
+                    if (index > 8) {
+                        return '<span class="' + className + '">.' + (index + 1) + '</span>';
+                    } else {
+                        return '<span class="' + className + '">.0' + (index + 1) + '</span>';
+                    }
+                },
+            },
+        });
+    });
 }
 
 // s
-// if ($('.s-sectionX').length) {}
-
-// #page
-if ($('#page_contato').length) {
-    $("#formContato").validate({
-        submitHandler: function (form) {
-            //SUBMIT form
-            $(form).ajaxSubmit({
-                //target: 'status-envio',
-                beforeSubmit: function () {
-                    $('#formContato .c-stsSend').removeClass('u-dnone');
-                    $('#formContato .c-stsSend__feedback--load').removeClass('u-dnone');
-                    $('#formContato  #btnContato').attr('disabled', true);
-                },
-                success: function (result) {
-                    result = result.split('|');
-                    if(parseInt(result[1]) == 1){
-                        $('#formContato .c-stsSend__feedback').addClass('u-dnone');
-                        $('#formContato .c-stsSend__feedback--success').removeClass('u-dnone');
-                        setTimeout(function(){
-                            $('#formContato #btnContato').attr('disabled',false);
-                            $("#formContato .field").val('');
-                            $("#formContato textarea").val('').html('');
-                            $("#formContato .field").removeClass('error');
-                            $('#formContato .c-stsSend').addClass('u-dnone');
-                            $('#formContato .c-stsSend__feedback').addClass('u-dnone');
-                        },2000);
-                    }else{
-                        $('#formContato .c-stsSend__feedback').addClass('u-dnone');
-                        $('#formContato .c-stsSend__feedback--error').removeClass('u-dnone');
-                        $('#formContato .c-stsSend__feedback--error span').html(result[2]);
-                        setTimeout(function () {
-                            $('#formContato .c-stsSend').addClass('u-dnone');
-                            $('#formContato .c-stsSend__feedback').addClass('u-dnone');
-                            $('#formContato #btnContato').attr('disabled', false);
-                        }, 3000);
-                    }
-                }
-            });
-        }
+if ($('.s-specialEvents').length) {
+    //s-specialEvents__swiper
+    var specialEvents__swiper = new Swiper ('.s-specialEvents__swiper', {
+        speed: 400,
+        spaceBetween: 0,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: '.s-specialEvents__swiper .swiper-pagination',
+            clickable: true,
+            type: 'bullets',
+        },
     });
-    $(document).on('change','#formContato_estado',function(){
-        var uf = $(this).val();
-        $("#formContato_cidade").html('<option>Carregando cidades...</option>');
-        $.ajax({
-            type: "POST",
-            data: {uf: uf},
-            url: "ajax-cidades.php",
-            success: function (result) {
-                $("#formContato_cidade").html(result);
+}
+if ($('.s-podcasts').length) {
+    if (is.mobile()) {
+        var podcasts__swiper = new Swiper('.s-podcasts__swiper', {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            pagination: {
+                el: '.s-podcasts__swiper .swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                540: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                760: {
+                    slidesPerView: 2,
+                    spaceBetween: 15
+                },
+                920: {
+                    slidesPerView: 3,
+                    spaceBetween: 20
+                },
             }
         });
+    }
+}
+if ($('.s-nextEvents').length) {
+    var nextEvents__swiper = new Swiper('.s-nextEvents__swiper', {
+        slidesPerView: 3,
+        navigation: {
+            nextEl: '.s-nextEvents .swiper-button-next',
+            prevEl: '.s-nextEvents .swiper-button-prev',
+        },
+        breakpoints: {
+            780: {
+                slidesPerView: 1,
+            },
+            970: {
+                slidesPerView: 2,
+            },
+        }
+    });
+}
+if ($('.s-lastPosts').length) {
+    var lastPosts__swiper = new Swiper('.s-lastPosts__swiper', {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.s-lastPosts .swiper-button-next',
+            prevEl: '.s-lastPosts .swiper-button-prev',
+        },
+        breakpoints: {
+            520: {
+                slidesPerView: 1,
+            },
+            930: {
+                slidesPerView: 2,
+            },
+        }
     });
 }

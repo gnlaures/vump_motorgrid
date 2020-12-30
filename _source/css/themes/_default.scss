@@ -27,6 +27,7 @@ $whatsappPrimary: #25d366;
 $whatsappSecondary: #1eb456;
 
 // Sizes
+$containerPadding: 0 15px;
 $containerWidth: 960px;
 $containerBigWidth: 1440px;
 $maxRowWidth: 2560px;
@@ -40,7 +41,8 @@ $media_content : "../../media/img/content/";
 // text
 $text: #666;
 $placeholderText: lighten($text, 15%);
-$fontFamily__default: 'Oswald', 'Roboto', 'Arial', 'Calibri', sans-serif;
+$fontFamily__default: 'Oswald', 'Lato', 'Arial', 'Calibri', sans-serif;
+$fontFamily__p: 'Lato', 'Arial', 'Calibri', sans-serif;
 $fwLight: 300; 
 $fwRegular: 400;
 $fwMedium: 500;

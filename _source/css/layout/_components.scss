@@ -1,4 +1,599 @@
-// form
+// form / alerts
+$field_height: 44px;
+$field_padding: 20px;
+$field_radius: $field_height / 2;
+$fields_borderColor: transparent;
+$fields_borderColor_focus: $baseGray;
+$field_bg: $white3;
+$field_bg_focus: $mutedGray;
+$spacer_bg: $mutedGray;
+$field_checks_size: 20px;
+.c-form {
+    &__fieldsHero {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &.--pad5 {
+            @include calcWidthForPositionNegative(-5px);
+            > .c-form__field {
+                padding: 5px;
+                &.--file {
+                    .inputAttach {
+                        @include calc(width, 100%, '-', 10px);
+                        left: 5px;
+                        bottom: -20px;
+                    }
+                    &:after {
+                        bottom: 17px;
+                        right: 25px;
+                    }
+                }
+            }
+            > .c-form__spacer {
+                @include calc(width, 100%, '-', 10px);
+                left: 5px;
+                margin: 5px 0;
+            }
+        }
+        &.--pad10 {
+            @include calcWidthForPositionNegative(-10px);
+            > .c-form__field {
+                padding: 10px;
+                &.--file {
+                    .inputAttach {
+                        @include calc(width, 100%, '-', 20px);
+                        left: 10px;
+                        bottom: -15px;
+                    }
+                    &:after {
+                        bottom: 22px;
+                        right: 30px;
+                    }
+                }
+            }
+            > .c-form__spacer {
+                @include calc(width, 100%, '-', 20px);
+                left: 10px;
+                margin: 10px 0;
+            }
+        }
+        &.--pad15 {
+            @include calcWidthForPositionNegative(-15px);
+            > .c-form__field {
+                padding: 15px;
+                &.--file {
+                    .inputAttach {
+                        @include calc(width, 100%, '-', 30px);
+                        left: 15px;
+                        bottom: -10px;
+                    }
+                    &:after {
+                        bottom: 27px;
+                        right: 35px;
+                    }
+                }
+            }
+            > .c-form__spacer {
+                @include calc(width, 100%, '-', 30px);
+                left: 15px;
+                margin: 15px 0;
+            }
+        }
+        &.--pad20 {
+            @include calcWidthForPositionNegative(-20px);
+            > .c-form__field {
+                padding: 20px;
+                &.--file {
+                    .inputAttach {
+                        @include calc(width, 100%, '-', 40px);
+                        left: 20px;
+                        bottom: -5px;
+                    }
+                    &:after {
+                        bottom: 32px;
+                        right: 40px;
+                    }
+                }
+            }
+            > .c-form__spacer {
+                @include calc(width, 100%, '-', 40px);
+                left: 20px;
+                margin: 20px 0;
+            }
+        }
+        &.--pad25 {
+            @include calcWidthForPositionNegative(-25px);
+            > .c-form__field {
+                padding: 25px;
+                &.--file {
+                    .inputAttach {
+                        @include calc(width, 100%, '-', 50px);
+                        left: 25px;
+                        bottom: 0;
+                    }
+                    &:after {
+                        bottom: 35px;
+                        right: 45px;
+                    }
+                }
+            }
+            > .c-form__spacer {
+                @include calc(width, 100%, '-', 50px);
+                left: 25px;
+                margin: 25px 0;
+            }
+        }
+    }
+    
+    // spacer
+    &__spacer {
+        display: block;
+        position: relative;
+        height: 1px;
+        background: $spacer_bg;
+    }
+    
+    // all elements
+    input, textarea, select, label, .fakeLabel {
+        display: block;
+        width: 100%;
+    }
+    
+    // fields
+    input, select, textarea {
+        @include transition();
+        @include roundedAll($field_radius);
+        @include paragrafos();
+        background: $field_bg;
+        border: 1px solid $fields_borderColor;
+        @include placeholder {
+            @include labels($tc: $placeholderText);
+        }
+        &:focus {
+            border-color: $fields_borderColor_focus;
+            background: $field_bg_focus;
+        }
+    }
+    input, select {
+        height: $field_height;
+        padding: 0 $field_padding;
+    }
+    textarea {
+        padding: $field_padding;
+        min-height: $field_height * 2;
+        max-height: 300px;
+        resize: vertical;
+    }
+    
+    // titles & labes
+    label, .fakeLabel {
+        @include labels();
+        margin-bottom: 4px;
+        &.--withObs {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            .caption, strong {
+                @include labels();
+            }
+            .obs, .observation {
+                @include labels();
+                font-weight: $fwLight;
+            }
+        }
+    }
+    
+    // fields with modifiers
+    &__field {
+        position: relative;
+        &.--range {
+            .rangeHero {
+                @include calcWidthForPositionNegative(-5px);
+                display: flex;
+                flex-direction: row;
+            }
+            .min, .max {
+                padding: 0 5px;
+                @include flexWidth(50%);
+            }
+        }
+        &.--check {
+            .checkHero {
+                > * {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    margin-bottom: 10px;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                    &:first-of-type {
+                        margin-top: 5px;
+                    }
+                }
+            }
+            .fakeLabel {
+                margin-bottom: 8px;
+            }
+            label {
+                @include paragrafos($tc: 16px);
+                padding-left: 5px;
+                cursor: pointer;
+                order: 2;
+            }
+            input {
+                @include flexWidth($field_checks_size);
+                height: $field_checks_size;
+                padding: 0;
+                border: 0;
+                order: 1;
+                &:checked {
+                    background: url(#{$media_icons}/icon_checked.svg);
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+            &.--checkbox {
+                input {
+                    @include roundedAll(4px);
+                }
+            }
+            &.--radio {
+                input {
+                    @include roundedAll(50%);
+                }
+            }
+        }
+        &.--file {
+            position: relative;
+            .inputText {
+                position: relative;
+                z-index: 1;
+                cursor: pointer;
+                padding-right: 50px;
+            }
+            .inputAttach {
+                //background: red;
+                cursor: pointer;
+                background: transparent;
+                position: absolute;
+                z-index: 2;
+                width: 100%;
+                @include opacity(0);
+            }
+            
+            &:after {
+                @include transforms(rotate(0deg), center);
+                @include transition();
+                content: '';
+                width: 20px;
+                height: 20px;
+                display: block;
+                position: absolute;
+                bottom: 22px;
+                right: 35px;
+                background: url(#{$media_icons}icon_attach.svg);
+                background-repeat: no-repeat;
+                background-position: center center;
+                background-size: contain;
+                z-index: 1;
+            }
+        }
+        &.--select {
+            position: relative;
+            * {
+                @include transition(all, 0ms, linear);
+            }
+            .selectBox,
+            .inputBox {
+                @include roundedAll($field_radius);
+                background: $field_bg;
+                height: $field_height;
+                display: block;
+                position: relative;
+                width: 100%;
+            }
+            .selectBox {
+                select {
+                    @include opacity(0);
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    z-index: 2;
+                }
+            }
+            .inputBox {
+                z-index: 1;
+                &:after {
+                    @include transforms(rotate(0deg) translateY(50%), center);
+                    @include transition();
+                    content: '';
+                    width: 12px;
+                    height: 10px;
+                    display: block;
+                    position: absolute;
+                    bottom: 50%;
+                    right: 20px;
+                    background: url(#{$media_assets}caret-down.svg);
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                    background-size: contain;
+                }
+            }
+            
+            &.is-active {
+                .selectBox {
+                    select {
+                        @include opacity(1);
+                        background: transparent;
+                        height: $field_height;
+                    }
+                }
+                .inputBox {
+                    input {
+                        @include opacity(0);
+                    }
+                    &:after {
+                        @include transforms(rotate(180deg) translateY(50%), bottom);
+                    }
+                }
+            }
+        }
+        &.--select.--full {
+            .selectBox {
+                height: auto;
+                background-color: transparent;
+            }
+        }
+        &.--select2 {
+            .select2 {
+                width: 100% !important;
+                position: relative;
+                .selection {
+                    .select2-selection {
+                        &:after {
+                            @include transition();
+                            content: '';
+                            width: 12px;
+                            height: 10px;
+                            display: block;
+                            position: absolute;
+                            bottom: ($field_height / 2) - 5px;
+                            right: 20px;
+                            z-index: 4;
+                            background: url(#{$media_assets}caret-down.svg);
+                            background-repeat: no-repeat;
+                            background-position: center center;
+                            background-size: contain;
+                        }
+                    }
+                }
+                &.select2-container--open {
+                    .selection {
+                        .select2-selection {
+                            &:after {
+                                @include transforms(rotate(180deg), center);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.--select2.--default {
+            .select2-container--default {
+                .select2-selection--single {
+                    @include roundedAll(0);
+                    border: 0;
+                    background: transparent;
+                    height: $field_height;
+                    .select2-selection__rendered {
+                        @include paragrafos();
+                        @include roundedAll($field_radius);
+                        padding: 0 $field_radius;
+                        border-color: $fields_borderColor;
+                        background: $field_bg;
+                        height: $field_height;
+                        line-height: $field_height;
+                    }
+                    .select2-selection__placeholder {
+                        @include labels($tc: $placeholderText);
+                        height: $field_height;
+                        line-height: $field_height;
+                    }
+                    .select2-selection__arrow {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &.--select2.--multiple {
+            .select2-container--default {
+                .selection {
+                    .select2-selection {
+                        .select2-search {
+                            @include roundedAll($field_radius);
+                            height: $field_height;
+                            display: block;
+                            position: relative;
+                            background: $field_bg_focus;
+                            &:after {
+                                content: '';
+                                display: block;
+                                width: 20px;
+                                height: 20px;
+                                position: absolute;
+                                top: 12px;
+                                left: 20px;
+                                z-index: 2;
+                                background: url(#{$media_icons}icon_search.svg);
+                            }
+                            .select2-search__field {
+                                @include transition($property: background);
+                                background: $field_bg;
+                                margin-top: 0;
+                                margin-left: 0;
+                                padding: 0 $field_padding;
+                                border: 1px solid $fields_borderColor;
+                                position: relative;
+                                z-index: 3;
+                                &:focus {
+                                    border: 1px solid $fields_borderColor_focus;
+                                    background-color: transparent;
+                                    padding-left: 50px;
+                                    z-index: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+                .select2-selection--multiple {
+                    @include roundedAll(0);
+                    background-color: transparent;
+                    border: 0;
+                    padding-bottom: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+        &.--btn {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        &.--text {
+            p {
+                @include paragrafos();
+            }
+        }
+        &.--rangeDefault {
+            label {
+                margin-bottom: 10px;
+            }
+            .rangeSlider {
+                display: block;
+                position: relative;
+                width: 100%;
+                padding-bottom: 5px;
+            }
+            
+            .rangeSlider__range {
+                width: calc(100% - (55px));
+                height: 4px;
+                border-radius: 2px;
+                background: $field_bg_focus;
+                outline: none;
+                padding: 0;
+                margin: 0;
+            }
+            .rangeSlider__range::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background: $primary;
+                cursor: pointer;
+                -webkit-transition: background .15s ease-in-out;
+                transition: background .15s ease-in-out;
+            }
+            .rangeSlider__range::-webkit-slider-thumb:hover {
+                background: $primaryDark;
+            }
+            .rangeSlider__range:active::-webkit-slider-thumb {
+                background: #393939;
+            }
+            .rangeSlider__range::-moz-range-thumb {
+                width: 10px;
+                height: 10px;
+                border: 0;
+                border-radius: 50%;
+                background: $primary;
+                cursor: pointer;
+                -moz-transition: background .15s ease-in-out;
+                transition: background .15s ease-in-out;
+            }
+            .rangeSlider__range::-moz-range-thumb:hover {
+                background: $primaryDark;
+            }
+            .rangeSlider__range:active::-moz-range-thumb {
+                background: #393939;
+            }
+            .rangeSlider__range:focus::-webkit-slider-thumb {
+                //box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+            }
+            
+            .rangeSlider__value {
+                @include roundedAll(10px);
+                @include labels($tc: $white, $fs: 14px);
+                display: block;
+                width: 40px;
+                line-height: 20px;
+                height: 20px;
+                text-align: center;
+                background: $primary;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                margin-top: -10px;
+            }
+            .rangeSlider__value:after {
+                position: absolute;
+                top: 3px;
+                left: -5px;
+                width: 0;
+                height: 0;
+                border-top: 7px solid transparent;
+                border-right: 7px solid $primary;
+                border-bottom: 7px solid transparent;
+                content: '';
+            }
+            
+            ::-moz-range-track {
+                background: #393939;
+                border: 0;
+            }
+            
+            input::-moz-focus-inner,
+            input::-moz-focus-outer {
+                border: 0;
+            }
+        }
+        &.--rangeDefault.--withArrow {
+            padding-left: 50px;
+            &:before {
+                content: '';
+                display: block;
+                width: 20px;
+                height: 20px;
+                position: absolute;
+                top: 10px;
+                left: 20px;
+                background: red;
+                background: url(#{$media_icons}icon_sub.png);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+            }
+        }
+    }
+    
+    // form with steps
+    &__step {
+        margin-top: 50px;
+        h2 {
+            margin-bottom: 10px;
+        }
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+}
 .c-stsSend {
     @keyframes animationRotateLoader {
         from {@include transforms(rotate(0deg), center)}
@@ -58,336 +653,75 @@
         }
     }
 }
-.c-simpleForm {
-    display: block;
-    ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: 100%;
-        @include calcWidthForPositionNegative(-15px);
-    }
-    li {
-        position: relative;
-        display: block;
-        padding: 15px;
-    }
-    li.liBtn {
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-end;
-        .field--hiddenValidate, input {
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            display: inline;
-            width: 0;
-            height: 0;
-            @include opacity(0);
-        }
-    }
-    li.liFile {
-        .inputText {
-            position: relative;
-            z-index: 1;
-            cursor: pointer;
-            padding-right: 50px;
-        }
-        .inputAttach {
-            cursor: pointer;
-            background: $white;
-            position: absolute;
-            z-index: 2;
-            left: 15px;
-            bottom: -5px;
-            right: 0;
-            width: 100%;
-            @include calc(width, 100%, '-', 30px);
-            @include opacity(0);
-        }
-        &:after {
-            @include transforms(rotate(0deg), center);
-            @include transition();
-            content: '';
-            width: 20px;
-            height: 20px;
-            display: block;
-            position: absolute;
-            bottom: 26px;
-            right: 35px;
-            background: url(#{$media_icons}icon_attach.svg);
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: contain;
-            z-index: 1;
-        }
-    }
-    li.liSelectFull {
-        position: relative;
-        * {
-            @include transition(all, 0ms, linear);
-            @include transition(border, 200ms, linear);
-        }
-        .selectBox {
-            display: block;
-            position: relative;
-            width: 100%;
-            select {
-                @include opacity(0);
-                display: block;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: 2;
-            }
-        }
-        .inputBox {
-            display: block;
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            &:after {
-                @include transforms(rotate(0deg) translateY(50%), center);
-                @include transition();
-                content: '';
-                width: 12px;
-                height: 10px;
-                display: block;
-                position: absolute;
-                bottom: 50%;
-                right: 20px;
-                background: url(#{$media_assets}caret-down.svg);
-                background-repeat: no-repeat;
-                background-position: center center;
-                background-size: contain;
-            }
-        }
-        
-        &.is-active {
-            .selectBox {
-                select {
-                    @include opacity(1);
-                    background: transparent;
-                    height: 44px;
-                }
-            }
-            .inputBox {
-                input {
-                    @include opacity(0);
-                }
-                &:after {
-                    @include transforms(rotate(180deg) translateY(50%), bottom);
-                }
-            }
-        }
-    }
-    li.liCheckbox {
-        div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex-wrap: nowrap;
-            margin-bottom: 10px;
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-            * {
-                cursor: pointer;
-            }
-            label {
-                @include paragrafos();
-                text-transform: none;
-                order: 2;
-                padding-left: 10px;
-                margin-bottom: 0;
-            }
-            input {
-                @include roundedAll(4px);
-                @include flexWidth(24px);
-                display: block;
-                padding: 0;
-                height: 24px;
-                &:checked {
-                    background: url(#{$media_icons}/icon_checked.svg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                }
-            }
-        }
-    }
-    li.liRadio {
-        div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex-wrap: nowrap;
-            margin-bottom: 10px;
-            &:last-of-type {
-                margin-bottom: 0;
-            }
-            * {
-                cursor: pointer;
-            }
-            label {
-                @include paragrafos();
-                text-transform: none;
-                order: 2;
-                padding-left: 10px;
-                margin-bottom: 0;
-            }
-            input {
-                @include roundedAll(12px);
-                @include flexWidth(24px);
-                display: block;
-                padding: 0;
-                height: 24px;
-                &:checked {
-                    background: url(#{$media_icons}/icon_checked.svg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    background-position: center;
-                }
-            }
-        }
-    }
-    label, input, select, textarea, .listOfSelectedJobs {
-        @include transition();
-        display: block;
-        width: 100%;
-    }
-    input, select, textarea, .listOfSelectedJobs {
-        background: $white;
-        border: 1px solid $lightGray;
-    }
-    .listOfSelectedJobs {
-        span {
-            @include paragrafos($tc: $placeholderText);
-        }
-        span[data-codejob] {
-            @include paragrafos();
-        }
-    }
-    input, select, textarea {
-        @include paragrafos;
-        @include placeholder {
-            @include paragrafos($tc: $placeholderText);
-        }
-        &.error{
-            border: 1px solid $feedbackError;
-        }
-        &:focus {
-            border-color: $primary;
-        }
-    }
-    input, select {
-        height: 44px;
-        line-height: 44px;
-        padding: 0 20px;
-    }
-    select {
-        &:invalid {
-            color: $placeholderText;
-        }
-    }
-    textarea {
-        padding: 15px 20px;
-        line-height: 1.5;
-        height: 100px;
-        max-height: 200px;
-        min-height: 100px;
-        resize: vertical;
-    }
-    label {
-        display: block;
-        margin-bottom: 5px;
-        font-size: 14px;
-        &.error{
-            font-size: 12px;
-            color: $feedbackError;
-            bottom: -5px;
-            left: 15px;
-            position: absolute;
-        }
-    }
-}
 
-// hamburguer menu
+// menus
 .c-hamburguer {
-    @include transforms(translateY(-50%), center);
-    display: none;
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    z-index: 4;
-    .c-hamburguer__hero {
-        @include transforms($property: rotate(0deg));
+    @include flexWidth(20px);
+    @include transition();
+    height: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    &__bar {
         @include transition();
-        cursor: pointer;
         display: block;
-        height: 26px;
+        width: 100%;
+        height: 1px;
         position: relative;
-        width: 30px;
-        .bar {
-            @extend .u-showElement;
-            @include roundedAll(1px);
-            @include transforms($property: rotate(0deg));
-            @include transition();
-            background: $mutedGray;
-            display: block;
-            height: 2px;
-            position: absolute;
-            width: 100%;
-            &.bar_1 {
-                top: 0;
-                left: 0;
-            }
-            &.bar_2 {
-                top: 12px;
-                left: 0;
-            }
-            &.bar_3 {
-                top: 24px;
-                left: 0;
-            }
+        &:last-of-type {
+            margin-bottom: 0;
         }
     }
+    
+    &.--gray {
+        .c-hamburguer__bar {
+            background: $darkGray;
+        }
+    }
+    &.--white {
+        .c-hamburguer__bar {
+            background: $white;
+        }
+    }
+    &.--primary {
+        .c-hamburguer__bar {
+            background: $primary;
+        }
+    }
+    &.--secondary {
+        .c-hamburguer__bar {
+            background: $secondary;
+        }
+    }
+    
     &.is-active {
-        margin-top: -10px;
-        right: 15px;
-        @include roundedAll(20px);
-        .c-hamburguer__hero {
-            @include transforms($property: rotate(180deg) scale(0.8));
-            .bar {
-                background: $white;
-                &.bar_1 {
-                    top: 12px;
-                    @include transforms($property: rotate(45deg));
-                }
-                &.bar_2 {
-                    @extend .u-hideElement;
-                }
-                &.bar_3 {
-                    top: 12px;
-                    @include transforms($property: rotate(-45deg));
-                }
+        @include transforms(rotate(180deg), center);
+        .c-hamburguer__bar {
+            &:nth-child(1) {
+                @include transforms(rotate(45deg), center);
+                top: 7px;
+            }
+            &:nth-child(2) {
+                @include opacity(0);
+            }
+            &:nth-child(3) {
+                @include transforms(rotate(-45deg), center);
+                top: -7px;
             }
         }
     }
 }
 
 // buttons / links / sub menu
-$c_btn_heightDefault: 50px;
-$c_btn_heightSmall: 38px;
+$c_btn_heightDefault: 45px;
+$c_btn_heightSmall: 36px;
 $c_btn_maxWidth: 220px;
-$c_btnIcon_heightDefault: 50px;
-$c_btnIcon_heightSmall: 38px;
+$c_btnIcon_heightDefault: 45px;
+$c_btnIcon_heightSmall: 36px;
 $c_btnIcon_maxWidth: 220px;
 .c-btn {
     @include transition();
-    @include roundedAll();
     position: relative;
     overflow: hidden;
     display: block;
@@ -396,11 +730,12 @@ $c_btnIcon_maxWidth: 220px;
     width: 100%;
     cursor: pointer;
     background: $primary;
+    font-family: $fontFamily__p;
     height: $c_btn_heightDefault;
     line-height: $c_btn_heightDefault;
     text-align: center;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: $fwRegular;
     color: $white;
     white-space: nowrap;
@@ -414,7 +749,7 @@ $c_btnIcon_maxWidth: 220px;
     }
     &.--secondary {
         background: $secondary;
-        color: $white;
+        color: $primaryDark;
         &:hover {
             background: $secondaryDark;
         }
@@ -818,6 +1153,61 @@ $c_btnIcon_maxWidth: 220px;
         &.is-active {
             > .c-subMenu__content {
                 top: $c_btn_heightDefault;
+            }
+        }
+    }
+    
+    // mobile
+    &.--mobile {
+        .c-subMenu__mask {
+            display: none !important;
+        }
+        > .c-subMenu__call {
+            text-align: left;
+            padding-right: 30px;
+            &:after {
+                @include transforms(translateY(-50%), center);
+                left: inherit;
+                bottom: inherit;
+                right: 0;
+                top: 50%;
+            }
+        }
+        > .c-subMenu__content {
+            @include transforms(translateX(0), center);
+            overflow-y: hidden;
+            max-height: 0;
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: 0 10px;
+            display: block;
+            width: 100%;
+            border: 0;
+            background: $white3;
+        }
+    
+        &.is-active {
+            > .c-subMenu__call {
+                &:after {
+                    @include transforms(translateY(50%) rotate(180deg), center);
+                }
+            }
+            > .c-subMenu__content {
+                overflow-y: auto;
+                top: 0;
+                padding: 10px;
+                max-height: 2500px;
+                margin: 10px 0 20px 0;
+            }
+        }
+    
+        .c-subMenu {
+            .c-subMenu__call {
+                padding-right: 35px;
+                &:after {
+                    right: 10px;
+                }
             }
         }
     }
@@ -1316,4 +1706,147 @@ $c_subMenuHover_defaultHeight: 30px;
     }
 }
 
-// cards
+// ui
+.c-linkVideo {
+    display: block;
+    position: relative;
+    background: $primary;
+    &__cover {
+        @include opacity(0.5);
+        @include transition();
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        object-fit: cover;
+    }
+    &__play {
+        @include transition();
+        @include roundedAll(50%);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 90px;
+        height: 90px;
+        background: $secondary;
+        position: absolute;
+        top: 50%;
+        z-index: 2;
+        left: 50%;
+        margin-left: -40px;
+        margin-top: -40px;
+        img {
+            display: block;
+            width: 14px;
+        }
+        &:hover {
+            @include scale(1.1, center);
+        }
+    }
+    &:hover {
+        .c-linkVideo__cover {
+            @include opacity(0.85)
+        }
+    }
+}
+.c-linkArrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: $secondary;
+    img {
+        width: 7px;
+    }
+    &:hover {
+        background: $secondaryDark;
+    }
+}
+
+//cards
+.c-cardPodcast {
+    &__figure {
+    
+    }
+    &__description {
+        @include transition();
+        padding: 25px 25px 40px 25px;
+        background: $primaryLight;
+        h2 {
+            @include paragrafos($tc: $white, $fs: 16px, $fw: $fwRegular);
+            font-family: $fontFamily__default;
+        }
+    }
+    &__link {
+        padding: 0 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: -20px;
+    }
+    &:hover {
+        .c-cardPodcast__description {
+            background: $primaryDark;
+        }
+    }
+}
+.c-cardEvent {
+    display: block;
+    max-width: 200px;
+    padding: 0 15px;
+    h2, span, p {
+        color: #3C3C3C;
+        line-height: 1;
+    }
+    h2 {
+        font-size: 33px;
+    }
+    .local {
+        font-size: 16px;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 25px;
+        margin-top: 20px;
+    }
+    .c-btn {
+        max-width: 100px;
+        color: $white;
+        font-family: $fontFamily__default;
+        font-size: 13px;
+    }
+}
+.c-cardPost {
+    &__figure {
+    
+    }
+    &__title {
+        @include transition();
+        padding: 25px;
+        background: $primaryDark;
+        h2 {
+            @include paragrafos($tc: $white, $fs: 18px, $fw: $fwRegular);
+            font-family: $fontFamily__default;
+            text-align: center;
+        }
+    }
+    &__link {
+        padding: 0 30px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-top: -20px;
+    }
+    &:hover {
+        .c-cardPost__title {
+            background: $primaryLight;
+        }
+    }
+}
