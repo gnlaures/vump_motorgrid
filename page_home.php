@@ -252,7 +252,6 @@
 				</div>
 			</div>
 		</div>
-
 	</section>
 
 	<section class="s-lastPosts">
@@ -281,7 +280,7 @@
 								<h2>Novo Porsche 911 Turbo S tem 650 cavalos, ele já tem preço aqui no Brasil e você poderá encomenda-lo em breve</h2>
 							</div>
 						</a>
-					</div>
+					        </div>
 					<div class="swiper-slide">
 						<a href="#" class="c-cardPost">
 							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
