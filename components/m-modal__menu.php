@@ -6,7 +6,7 @@
 		<div class="m-defaultModal__content">
 			<div class="c-cardQR">
 				<div class="c-cardQR__qr">
-					<img src="media/img/qr_yellow.png" alt="QR Code">
+					<img src="media/img/content/qr_yellow.png" alt="QR Code">
 				</div>
 				<div class="c-cardQR__owner">
 					<span class="ownerName">Rafael Jakubowski</span>
@@ -16,7 +16,7 @@
 					<div class="c-cardMkp">
 						<div class="c-cardMkp__vip">VIP</div>
 						<div class="c-cardMkp__qr">
-							<img src="media/img/qr_black.png" alt="QR Code">
+							<img src="media/img/content/qr_black.png" alt="QR Code">
 						</div>
 						<div class="c-cardMkp__infos">
 							<span class="ownerName">Rafael Jakubowski</span>
@@ -24,7 +24,7 @@
 							<span class="ownerDate">Desde 01.10.2020</span>
 						</div>
 						<div class="c-cardMkp__brand">
-							<img src="media/img/brand_2.png" alt="Motorgrid">
+							<img src="media/img/assets/brand_2.png" alt="Motorgrid">
 						</div>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 				<li><a href="#">NOSSOS PARCEIROS</a></li>
 				<li><a href="#">REGRAS MOTORGRID</a></li>
 				<li><a href="#">NOTÍCIAS</a></li>
-				<li><a href="#" class="c-btn --secondary">Convidar um amigo</a></li>
+				<li><a href="#modal-convite" class="c-btn --secondary js-openModal">Convidar um amigo</a></li>
 				<li><a href="#" class="is-disabled">Cancelar assinatura</a></li>
 			</ul>
 		</div>

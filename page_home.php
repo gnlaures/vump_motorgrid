@@ -8,7 +8,7 @@
 				<div class="swiper-slide">
 					<div class="l-headerHome__content">
 						<figure class="content__figure">
-							<a href="#" class="c-linkVideo">
+							<a href="https://www.youtube.com/watch?v=scTqpfL9WMA" data-fancybox="header" class="c-linkVideo">
 								<img src="media/img/content/header_1.jpg" alt="Motorgrid Brasil" class="c-linkVideo__cover">
 								<div class="c-linkVideo__play">
 									<img src="media/img/assets/arrow_right_g.png" alt="Play">
@@ -27,7 +27,7 @@
 				<div class="swiper-slide">
 					<div class="l-headerHome__content">
 						<figure class="content__figure">
-							<a href="#" class="c-linkVideo">
+							<a href="https://www.youtube.com/watch?v=scTqpfL9WMA" data-fancybox="header" class="c-linkVideo">
 								<img src="media/img/content/header_1.jpg" alt="Motorgrid Brasil" class="c-linkVideo__cover">
 								<div class="c-linkVideo__play">
 									<img src="media/img/assets/arrow_right_g.png" alt="Play">
@@ -46,7 +46,7 @@
 				<div class="swiper-slide">
 					<div class="l-headerHome__content">
 						<figure class="content__figure">
-							<a href="#" class="c-linkVideo">
+							<a href="https://www.youtube.com/watch?v=scTqpfL9WMA" data-fancybox="header" class="c-linkVideo">
 								<img src="media/img/content/header_1.jpg" alt="Motorgrid Brasil" class="c-linkVideo__cover">
 								<div class="c-linkVideo__play">
 									<img src="media/img/assets/arrow_right_g.png" alt="Play">

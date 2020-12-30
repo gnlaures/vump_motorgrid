@@ -20,7 +20,7 @@
 			<a href="#">Quero ser membro</a>
 		</div>
 		<div class="l-nav__qr u-dnone">
-			<a href="#">
+			<a href="#modal-qr" class="js-openModal">
 				<img src="media/img/content/qr_yellow.png" alt="QR Code">
 			</a>
 		</div>

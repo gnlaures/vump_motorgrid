@@ -1,6 +1,6 @@
-<footer class="l-footerMobile u-dnone">
-	<a href="#">Quero ser<br>membro</a>
-</footer>
+<a href="#" class="l-footerMobile u-dnone">
+	<span>Quero ser<br>membro</span>
+</a>
 
 <footer class="l-footer">
 	<p>SÃO PAULO, SÃO PAULO, SP, BRASIL</p>
