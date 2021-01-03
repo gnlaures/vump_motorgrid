@@ -39,7 +39,15 @@
 			$file = '__boilerplateComponents/page_tabs.php';
 			$title_page = 'Grids e Tabs - '.$title;
 			break;
+		case 'boilerplate_ui':
+			$file = '__boilerplateComponents/page_uiProject.php';
+			$title_page = 'UI Project - '.$title;
+			break;
 
+		case 'noticias':
+			$file = 'page_gridPost.php';
+			$title_page = 'Notícias - '.$title;
+			break;
 		case 'single':
 			$file = 'page_single.php';
 			$title_page = 'Título do post - '.$title;

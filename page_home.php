@@ -112,7 +112,7 @@
 			<div class="s-podcasts__swiper">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
-						<a href="#" class="c-cardPodcast">
+						<a href="#modal-podcast" class="c-cardPodcast js-openModal">
 							<div class="c-cardPodcast__figure u-aspectRatio --ratio-3-2">
 								<img src="media/img/content/podcast_1.png" alt="Título do Podcast">
 							</div>
@@ -127,7 +127,7 @@
 						</a>
 					</div>
 					<div class="swiper-slide">
-						<a href="#" class="c-cardPodcast">
+						<a href="#modal-podcast" class="c-cardPodcast js-openModal">
 							<div class="c-cardPodcast__figure u-aspectRatio --ratio-3-2">
 								<img src="media/img/content/podcast_1.png" alt="Título do Podcast">
 							</div>
@@ -142,7 +142,7 @@
 						</a>
 					</div>
 					<div class="swiper-slide">
-						<a href="#" class="c-cardPodcast">
+						<a href="#modal-podcast" class="c-cardPodcast js-openModal">
 							<div class="c-cardPodcast__figure u-aspectRatio --ratio-3-2">
 								<img src="media/img/content/podcast_1.png" alt="Título do Podcast">
 							</div>
@@ -157,7 +157,7 @@
 						</a>
 					</div>
 					<div class="swiper-slide">
-						<a href="#" class="c-cardPodcast">
+						<a href="#modal-podcast" class="c-cardPodcast js-openModal">
 							<div class="c-cardPodcast__figure u-aspectRatio --ratio-3-2">
 								<img src="media/img/content/podcast_1.png" alt="Título do Podcast">
 							</div>

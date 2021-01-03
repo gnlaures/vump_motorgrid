@@ -4,6 +4,7 @@
 	include('components/m-modal__search.php');
 	include('components/m-modal__qr.php');
 	include('components/m-modal__convite.php');
+	include('components/m-modal__podcast.php');
 	include("components/l-nav.php");
 	include($file);
 	include("components/l-footer.php");

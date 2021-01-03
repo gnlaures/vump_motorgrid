@@ -41,6 +41,7 @@ var jsLibraries__files = [
     '_libraries/aos/aos.js',
     '_libraries/select2/dist/js/select2.js',
     '_libraries/select2/dist/js/i18n/pt-BR.js',
+    '_libraries/plyr/plyr.min.js',
 ];
 gulp.task('jsLibraries', function(done) {
     gulp.src(jsLibraries__files)
@@ -56,6 +57,7 @@ var cssLibraries__files = [
     '_libraries/swiper/swiper.min.css',
     '_libraries/aos/aos.css',
     '_libraries/select2/dist/css/select2.min.css',
+    '_libraries/plyr/plyr.css',
 ];
 gulp.task('cssLibraries', function(done) {
     gulp.src(cssLibraries__files)
