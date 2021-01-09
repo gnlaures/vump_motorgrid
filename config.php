@@ -48,6 +48,24 @@
 			$file = 'page_gridPost.php';
 			$title_page = 'Notícias - '.$title;
 			break;
+		case 'sobre':
+			$file = 'page_sobre.php';
+			$title_page = 'Sobre - '.$title;
+			break;
+		case 'parceiros':
+			$file = 'page_parceiros.php';
+			$title_page = 'Parceiros - '.$title;
+			break;
+		case 'cadastro':
+			$file = 'page_member.php';
+			$title_page = 'Cadastro - '.$title;
+			break;
+		case 'projects':
+			$file = 'page_projects.php';
+			$title_page = 'Projects - '.$title;
+			break;
+
+
 		case 'single':
 			$file = 'page_single.php';
 			$title_page = 'Título do post - '.$title;

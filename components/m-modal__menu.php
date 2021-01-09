@@ -32,12 +32,12 @@
 			<span class="u-spacer"></span>
 			<ul class="listMainLinks">
 				<li><a href="#">EVENTOS</a></li>
-				<li><a href="#">SOBRE NÓS</a></li>
+				<li><a href="sobre">SOBRE NÓS</a></li>
 				<li><a href="#">O QUE NÓS FAZEMOS</a></li>
-				<li><a href="#">PROJETOS</a></li>
-				<li><a href="#">NOSSOS PARCEIROS</a></li>
+				<li><a href="projects">PROJETOS</a></li>
+				<li><a href="parceiros">NOSSOS PARCEIROS</a></li>
 				<li><a href="#">REGRAS MOTORGRID</a></li>
-				<li><a href="#">NOTÍCIAS</a></li>
+				<li><a href="noticias">NOTÍCIAS</a></li>
 				<li><a href="#modal-convite" class="c-btn --secondary js-openModal">Convidar um amigo</a></li>
 				<li><a href="#" class="is-disabled">Cancelar assinatura</a></li>
 			</ul>

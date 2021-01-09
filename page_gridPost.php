@@ -1,138 +1,125 @@
-<main class="l-pageContent --inner" id="page__singlePost">
-	<section class="s-listPosts">
+<main class="l-pageContent --inner">
+	<section class="s-defaultInnerSection s-gridPost">
 		<div class="u-container">
-			<div class="s-listPosts__header">
-				<h1>Notícias</h1>
+			<header class="s-defaultInnerSection__header">
+				<h1>NEWS</h1>
 				<p>Exibindo artigos da categoria: <strong><a href="#">Categoria X</a></strong></p>
-			</div>
-			<div class="s-listPosts__list">
-				<ul class="c-responsiveGrid"
-						data-maxw-breaks="900, 640"
-						data-maxw-cols="2, 1"
-						data-cols-init="3">
+			</header>
+			<div class="s-defaultInnerSection__content">
+				<ul>
 					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post1.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
+						<div class="c-cardPostHorizontal">
+							<a href="single" class="c-cardPostHorizontal__head">
 								<h2>McLaren trabalha em uma solução brilhante para salvar o motor a combustão</h2>
+								<span class="date">April 11, 2021</span>
+							</a>
+							<div class="c-cardPostHorizontal__content">
+								<a href="single" class="c-cardPostHorizontal__figure">
+									<img src="media/img/content/post1.png" alt="Título do post">
+								</a>
+								<div class="c-cardPostHorizontal__resume">
+									<p>Todos sabemos que a ordem mundial é trabalhar na eletrificação dos carros. Isso é algo que se tornou realidade de uma forma muito rápida, muito mais do que esperávamos. Os amantes de carros esportivos estão cada vez mais assustados e sempre a espera de alguma notícia animadora... pois é... a McLaren decidiu alegrar sua quarentena.</p>
+									<p>O site AUTOCAR entrevistou o Diretor de Operações da McLaren, Jens Ludmann, que relatou que a montadora britânica está nos estágios iniciais no desenvolvimento de um combustível sintético como alternativa à eletricidade, resumindo, os motores a combustão podem permanecer vivos e simplesmente funcionar com esse ``óleo limpo``.</p>
+									<p>‘’A tecnologia em torno dos combustíveis sintéticos ainda está sendo desenvolvida, mas se você levar em questão que ela pode ser produzida usando energia solar, facilmente transportável e depois bombeada (nos carros) como fazemos hoje em dia, existem potenciais benefícios em termos de emissões e praticidade’’.</p>
+									<p>Ou seja, a produção deste combustível seria bem mais prática e limpa de ponta a ponta, uma vez que os caminhões que as levariam aos postos também estariam as usando.</p>
+									<p>A duvida seguiu quando perguntaram se os carros que já estão nas ruas também poderiam receber esta tecnologia.</p>
+									<p>‘’Os motores de hoje precisariam apenas de pequenas modificações, e eu gostaria que essa tecnologia ganhasse mais tempo de antena’’.</p>
+									<p>Será que temos uma luz ao fim do túnel? Obriiiiigado McLaren!</p>
+								</div>
 							</div>
-						</a>
+						</div>
 					</li>
 					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post2.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
-								<h2>Novo Porsche 911 Turbo S tem 650 cavalos, ele já tem preço aqui no Brasil e você poderá encomenda-lo em breve</h2>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post3.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
-								<h2>Loja da McLaren no Brasil supera Oriente Médio e recebe o prêmio de Retailer of the Year 2019</h2>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post3.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
-								<h2>Loja da McLaren no Brasil supera Oriente Médio e recebe o prêmio de Retailer of the Year 2019</h2>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post1.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
+						<div class="c-cardPostHorizontal">
+							<a href="single" class="c-cardPostHorizontal__head">
 								<h2>McLaren trabalha em uma solução brilhante para salvar o motor a combustão</h2>
+								<span class="date">April 11, 2021</span>
+							</a>
+							<div class="c-cardPostHorizontal__content">
+								<a href="single" class="c-cardPostHorizontal__figure">
+									<img src="media/img/content/post1.png" alt="Título do post">
+								</a>
+								<div class="c-cardPostHorizontal__resume">
+									<p>Todos sabemos que a ordem mundial é trabalhar na eletrificação dos carros. Isso é algo que se tornou realidade de uma forma muito rápida, muito mais do que esperávamos. Os amantes de carros esportivos estão cada vez mais assustados e sempre a espera de alguma notícia animadora... pois é... a McLaren decidiu alegrar sua quarentena.</p>
+									<p>O site AUTOCAR entrevistou o Diretor de Operações da McLaren, Jens Ludmann, que relatou que a montadora britânica está nos estágios iniciais no desenvolvimento de um combustível sintético como alternativa à eletricidade, resumindo, os motores a combustão podem permanecer vivos e simplesmente funcionar com esse ``óleo limpo``.</p>
+									<p>‘’A tecnologia em torno dos combustíveis sintéticos ainda está sendo desenvolvida, mas se você levar em questão que ela pode ser produzida usando energia solar, facilmente transportável e depois bombeada (nos carros) como fazemos hoje em dia, existem potenciais benefícios em termos de emissões e praticidade’’.</p>
+									<p>Ou seja, a produção deste combustível seria bem mais prática e limpa de ponta a ponta, uma vez que os caminhões que as levariam aos postos também estariam as usando.</p>
+									<p>A duvida seguiu quando perguntaram se os carros que já estão nas ruas também poderiam receber esta tecnologia.</p>
+									<p>‘’Os motores de hoje precisariam apenas de pequenas modificações, e eu gostaria que essa tecnologia ganhasse mais tempo de antena’’.</p>
+									<p>Será que temos uma luz ao fim do túnel? Obriiiiigado McLaren!</p>
+								</div>
 							</div>
-						</a>
+						</div>
 					</li>
 					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post2.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
-								<h2>Novo Porsche 911 Turbo S tem 650 cavalos, ele já tem preço aqui no Brasil e você poderá encomenda-lo em breve</h2>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post3.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
-								<h2>Loja da McLaren no Brasil supera Oriente Médio e recebe o prêmio de Retailer of the Year 2019</h2>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post3.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
-								<h2>Loja da McLaren no Brasil supera Oriente Médio e recebe o prêmio de Retailer of the Year 2019</h2>
-							</div>
-						</a>
-					</li>
-					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post1.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
+						<div class="c-cardPostHorizontal">
+							<a href="single" class="c-cardPostHorizontal__head">
 								<h2>McLaren trabalha em uma solução brilhante para salvar o motor a combustão</h2>
+								<span class="date">April 11, 2021</span>
+							</a>
+							<div class="c-cardPostHorizontal__content">
+								<a href="single" class="c-cardPostHorizontal__figure">
+									<img src="media/img/content/post1.png" alt="Título do post">
+								</a>
+								<div class="c-cardPostHorizontal__resume">
+									<p>Todos sabemos que a ordem mundial é trabalhar na eletrificação dos carros. Isso é algo que se tornou realidade de uma forma muito rápida, muito mais do que esperávamos. Os amantes de carros esportivos estão cada vez mais assustados e sempre a espera de alguma notícia animadora... pois é... a McLaren decidiu alegrar sua quarentena.</p>
+									<p>O site AUTOCAR entrevistou o Diretor de Operações da McLaren, Jens Ludmann, que relatou que a montadora britânica está nos estágios iniciais no desenvolvimento de um combustível sintético como alternativa à eletricidade, resumindo, os motores a combustão podem permanecer vivos e simplesmente funcionar com esse ``óleo limpo``.</p>
+									<p>‘’A tecnologia em torno dos combustíveis sintéticos ainda está sendo desenvolvida, mas se você levar em questão que ela pode ser produzida usando energia solar, facilmente transportável e depois bombeada (nos carros) como fazemos hoje em dia, existem potenciais benefícios em termos de emissões e praticidade’’.</p>
+									<p>Ou seja, a produção deste combustível seria bem mais prática e limpa de ponta a ponta, uma vez que os caminhões que as levariam aos postos também estariam as usando.</p>
+									<p>A duvida seguiu quando perguntaram se os carros que já estão nas ruas também poderiam receber esta tecnologia.</p>
+									<p>‘’Os motores de hoje precisariam apenas de pequenas modificações, e eu gostaria que essa tecnologia ganhasse mais tempo de antena’’.</p>
+									<p>Será que temos uma luz ao fim do túnel? Obriiiiigado McLaren!</p>
+								</div>
 							</div>
-						</a>
+						</div>
 					</li>
 					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post2.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
-								<h2>Novo Porsche 911 Turbo S tem 650 cavalos, ele já tem preço aqui no Brasil e você poderá encomenda-lo em breve</h2>
+						<div class="c-cardPostHorizontal">
+							<a href="single" class="c-cardPostHorizontal__head">
+								<h2>McLaren trabalha em uma solução brilhante para salvar o motor a combustão</h2>
+								<span class="date">April 11, 2021</span>
+							</a>
+							<div class="c-cardPostHorizontal__content">
+								<a href="single" class="c-cardPostHorizontal__figure">
+									<img src="media/img/content/post1.png" alt="Título do post">
+								</a>
+								<div class="c-cardPostHorizontal__resume">
+									<p>Todos sabemos que a ordem mundial é trabalhar na eletrificação dos carros. Isso é algo que se tornou realidade de uma forma muito rápida, muito mais do que esperávamos. Os amantes de carros esportivos estão cada vez mais assustados e sempre a espera de alguma notícia animadora... pois é... a McLaren decidiu alegrar sua quarentena.</p>
+									<p>O site AUTOCAR entrevistou o Diretor de Operações da McLaren, Jens Ludmann, que relatou que a montadora britânica está nos estágios iniciais no desenvolvimento de um combustível sintético como alternativa à eletricidade, resumindo, os motores a combustão podem permanecer vivos e simplesmente funcionar com esse ``óleo limpo``.</p>
+									<p>‘’A tecnologia em torno dos combustíveis sintéticos ainda está sendo desenvolvida, mas se você levar em questão que ela pode ser produzida usando energia solar, facilmente transportável e depois bombeada (nos carros) como fazemos hoje em dia, existem potenciais benefícios em termos de emissões e praticidade’’.</p>
+									<p>Ou seja, a produção deste combustível seria bem mais prática e limpa de ponta a ponta, uma vez que os caminhões que as levariam aos postos também estariam as usando.</p>
+									<p>A duvida seguiu quando perguntaram se os carros que já estão nas ruas também poderiam receber esta tecnologia.</p>
+									<p>‘’Os motores de hoje precisariam apenas de pequenas modificações, e eu gostaria que essa tecnologia ganhasse mais tempo de antena’’.</p>
+									<p>Será que temos uma luz ao fim do túnel? Obriiiiigado McLaren!</p>
+								</div>
 							</div>
-						</a>
+						</div>
 					</li>
 					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post3.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
-								<h2>Loja da McLaren no Brasil supera Oriente Médio e recebe o prêmio de Retailer of the Year 2019</h2>
+						<div class="c-cardPostHorizontal">
+							<a href="single" class="c-cardPostHorizontal__head">
+								<h2>McLaren trabalha em uma solução brilhante para salvar o motor a combustão</h2>
+								<span class="date">April 11, 2021</span>
+							</a>
+							<div class="c-cardPostHorizontal__content">
+								<a href="single" class="c-cardPostHorizontal__figure">
+									<img src="media/img/content/post1.png" alt="Título do post">
+								</a>
+								<div class="c-cardPostHorizontal__resume">
+									<p>Todos sabemos que a ordem mundial é trabalhar na eletrificação dos carros. Isso é algo que se tornou realidade de uma forma muito rápida, muito mais do que esperávamos. Os amantes de carros esportivos estão cada vez mais assustados e sempre a espera de alguma notícia animadora... pois é... a McLaren decidiu alegrar sua quarentena.</p>
+									<p>O site AUTOCAR entrevistou o Diretor de Operações da McLaren, Jens Ludmann, que relatou que a montadora britânica está nos estágios iniciais no desenvolvimento de um combustível sintético como alternativa à eletricidade, resumindo, os motores a combustão podem permanecer vivos e simplesmente funcionar com esse ``óleo limpo``.</p>
+									<p>‘’A tecnologia em torno dos combustíveis sintéticos ainda está sendo desenvolvida, mas se você levar em questão que ela pode ser produzida usando energia solar, facilmente transportável e depois bombeada (nos carros) como fazemos hoje em dia, existem potenciais benefícios em termos de emissões e praticidade’’.</p>
+									<p>Ou seja, a produção deste combustível seria bem mais prática e limpa de ponta a ponta, uma vez que os caminhões que as levariam aos postos também estariam as usando.</p>
+									<p>A duvida seguiu quando perguntaram se os carros que já estão nas ruas também poderiam receber esta tecnologia.</p>
+									<p>‘’Os motores de hoje precisariam apenas de pequenas modificações, e eu gostaria que essa tecnologia ganhasse mais tempo de antena’’.</p>
+									<p>Será que temos uma luz ao fim do túnel? Obriiiiigado McLaren!</p>
+								</div>
 							</div>
-						</a>
-					</li>
-					<li>
-						<a href="single" class="c-cardPost">
-							<figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
-								<img src="media/img/content/post3.png" alt="Título do post">
-							</figure>
-							<div class="c-cardPost__title">
-								<h2>Loja da McLaren no Brasil supera Oriente Médio e recebe o prêmio de Retailer of the Year 2019</h2>
-							</div>
-						</a>
+						</div>
 					</li>
 				</ul>
 			</div>
-			<div class="s-listPosts__pagination">
+			<div class="s-defaultInnerSection__pagination">
 				<div class="c-pagination u-dflex u-aic u-jcsb">
 					<a href="#" class="c-pagination__prev is-disabled">Anterior</a>
 					<ul class="c-pagination__pages u-dflex u-jcc u-aic">
