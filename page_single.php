@@ -39,18 +39,18 @@
 									<h5>Lorem ipsum dolor sit amet, consectetur adipisicing.</h5>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis dolor dolore dolorum ea, earum est ipsa magnam molestias neque nihil obcaecati provident qui quo reiciendis reprehenderit repudiandae similique veniam!</p>
 									<ul>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</li>
+										<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</p></li>
+										<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</p></li>
+										<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</p></li>
+										<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</p></li>
 									</ul>
 									<h6>Lorem ipsum dolor sit amet.</h6>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci esse facere id necessitatibus, officia perspiciatis placeat porro quia, quod suscipit temporibus voluptates. Accusamus amet asperiores corporis id iure natus odit officia perferendis possimus quasi ratione reiciendis reprehenderit, unde voluptate voluptatum!</p>
 									<ol>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</li>
-										<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</li>
+										<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</p></li>
+										<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</p></li>
+										<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</p></li>
+										<li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, officia!</p></li>
 									</ol>
 									<div class="u-textWithCols --cols-2">
 										<figure><img src="media/img/content/post1.png" alt="McLaren trabalha em uma solução brilhante para salvar o motor a combustão"></figure>

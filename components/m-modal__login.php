@@ -1,4 +1,4 @@
-<div class="m-defaultModal --small --login is-active" id="modal-login">
+<div class="m-defaultModal --small --login" id="modal-login">
 	<div class="u-container">
 		<div class="m-defaultModal__close">
 			<img src="media/img/icons/icon_x.png" alt="Fechar">
