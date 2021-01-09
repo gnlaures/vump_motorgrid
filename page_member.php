@@ -10,10 +10,10 @@
 						<p>Além de você fazer parte da maior família de apaixonados por carro do Brasil, você contará com parceiros como:</p>
 						<p>McLaren Brasil, BMW Grand Brasil, Jaguar-Land Rover Grand Brasil, Audi Bexp, Mercedes-Benz Itatiaia, Pirelli, Frattina, Protech Blindagem, Anglo Glass, Paito Motors e outros..</p>
 						<p>Contamos com um ambiente familiar, fugimos da ostentação e exposição gratuita. Contamos com a privacidade e bons costumes.</p>
-						<p>Quanto custa para entrar no Motorgrid? NADA!</p>
+						<p>Quanto custa para entrar no Motorgrid? <span>NADA!</span></p>
 						<span class="u-blockSpace"></span>
 						<h3>O <strong>#MotorgridMember</strong> recebe inúmeros benefícios, seja em descontos em produtos de nossos parceiros, mão de obra, atendimento diferenciado e exclusivo. Entre algumas de nossas ações em conjunto com nossos parceiros para nossos Membros estão:</h3>
-						<ul>
+						<ul class="u-textWithCols --cols-2">
 							<li><p>McLaren in USA (pilotar The Spiders (720S e 600LT na pista e no deserto))</p></li>
 							<li><p>Levar nossos membros para conhecer Lewis Hamilton</p></li>
 							<li><p>Levar nossos membros para conhecer Niki Lauda</p></li>
@@ -39,13 +39,13 @@
 				</div>
 			</div>
 			<div class="s-signUp__r">
-				<form action="#" class="c-form" id="formCadastro">
+				<form action="#" class="c-form --dark" id="formCadastro">
 					<div class="c-form__step">
 						<div class="s-signUp__titleForm">
 							<h4>Sobre você</h4>
 							<span>* campos obrigatórios</span>
 						</div>
-						<ul class="c-form__fieldsHero --pad1">
+						<ul class="c-form__fieldsHero --pad2">
 							<li class="c-form__field u-fw50">
 								<input id="formCadastro_nome" type="text" name="nome" class="field" placeholder="Nome Completo*" required>
 							</li>
@@ -53,8 +53,7 @@
 								<input id="formCadastro_cpf" type="text" class="field cpfMask" name="cpf" placeholder="CPF*" required>
 							</li>
 							<li class="c-form__field u-fw50">
-								<label for="formCadastro_data">Data de nascimento*</label>
-								<input id="formCadastro_data" type="text" class="field dataMask" name="data" placeholder="__/__/____" required>
+								<input id="formCadastro_data" type="text" class="field dataMask" name="data" placeholder="Data de nascimento" required>
 							</li>
 							<li class="c-form__field u-fw50">
 								<input id="formCadastro_nome" type="text" name="nome" class="field" placeholder="Instagram">
@@ -67,7 +66,7 @@
 								<input id="formCadastro_telefone" type="tel" class="field foneMask" name="telefone" placeholder="(__) ____-_____" required>
 							</li>
 							<li class="c-form__field u-fw50 --select --full">
-								<div class="selectBox">
+								<div class="selectBox u-dflex u-jcsb u-aic">
 									<label for="formCadastro_camisa">Tam. Camisa</label>
 									<select name="camisa" id="formCadastro_camisa" class="field">
 										<option value="">Selecione</option>
@@ -81,17 +80,18 @@
 									</div>
 								</div>
 							</li>
-							<li class="c-form__field u-fw50">
+							<li class="c-form__field u-fw50 u-dflex u-jcsb u-aic">
 								<label for="formCadastro_tamanhoCalcado">Tam. Calçado</label>
 								<input id="formCadastro_tamanhoCalcado" type="number" name="tamanhoCalcado" class="field" min="30" max="50">
 							</li>
 							<li class="c-form__field u-fw100">
-								<label for="formCadastro_endereco">Endereço</label>
-								<input id="formCadastro_endereco" type="text" name="endereco" class="field">
+								<input id="formCadastro_endereco" type="text" name="endereco" class="field" placeholder="Endereço completo">
 							</li>
 							<li class="c-form__field u-fw100">
-								<label for="formCadastro_mensagem">Mensagem adicional</label>
-								<span class="observation">Algo que possa de ajudar a entrar no Motorgrid; Se tiver mais carros escrever aqui</span>
+								<div class="address">
+									<label for="formCadastro_mensagem">Mensagem adicional</label>
+									<span class="observation">Algo que possa de ajudar a entrar no Motorgrid; Se tiver mais carros escrever aqui</span>
+								</div>
 								<textarea id="formCadastro_mensagem" name="mensagem" class="field"></textarea>
 							</li>
 						</ul>
@@ -100,18 +100,15 @@
 						<div class="s-signUp__titleForm">
 							<h4>Sobre o veículo</h4>
 						</div>
-						<ul class="c-form__fieldsHero --pad1">
+						<ul class="c-form__fieldsHero --pad2">
 							<li class="c-form__field u-fw35">
-								<label for="formCadastro_marcaVeiculo">Marca do veículo</label>
-								<input id="formCadastro_marcaVeiculo" type="text" name="marcaVeiculo" class="field">
+								<input id="formCadastro_marcaVeiculo" type="text" name="marcaVeiculo" class="field" placeholder="Marca do veículo">
 							</li>
 							<li class="c-form__field u-fw35">
-								<label for="formCadastro_modeloVeiculo">Modelo do veículo</label>
-								<input id="formCadastro_modeloVeiculo" type="text" name="modeloVeiculo" class="field">
+								<input id="formCadastro_modeloVeiculo" type="text" name="modeloVeiculo" class="field" placeholder="Modelo do veículo">
 							</li>
 							<li class="c-form__field u-fw30">
-								<label for="formCadastro_placaVeiculo">placa</label>
-								<input id="formCadastro_placaVeiculo" type="text" name="placaVeiculo" class="field">
+								<input id="formCadastro_placaVeiculo" type="text" name="placaVeiculo" class="field" placeholder="Placa">
 							</li>
 							<li class="c-form__field u-fw100 --btn">
 								<button class="c-btn --secondary">Enviar Cadastro</button>
@@ -119,88 +116,6 @@
 						</ul>
 					</div>
 				</form>
-			</div>
-		</div>
-	</section>
-	<section class="s-podcasts">
-		<div class="u-container">
-			<div class="s-podcasts__header">
-				<h1 class="u-iconWithCaption u-jcfs">
-					<i><img src="media/img/icons/icon_waves.png" alt="Escute nossos podcast"></i>
-					<span>Escute nossos <strong>Podcast</strong></span>
-				</h1>
-				<a href="#" class="u-iconWithCaption u-jcfe --icon10 --linkFM">
-					<span><strong>Acesse</strong> todo o conteúdo na 89 FM</span>
-					<i><img src="media/img/assets/arrow_white_r.png"></i>
-				</a>
-				<a href="#" class="u-iconWithCaption u-jcfe --icon10 --linkTodos u-dnone">
-					<span>Todos</span>
-					<i><img src="media/img/assets/arrow_white_r.png"></i>
-				</a>
-			</div>
-			<div class="s-podcasts__swiper">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide">
-						<a href="#" class="c-cardPodcast">
-							<div class="c-cardPodcast__figure u-aspectRatio --ratio-3-2">
-								<img src="media/img/content/podcast_1.png" alt="Título do Podcast">
-							</div>
-							<div class="c-cardPodcast__description">
-								<h2>Neste episódio a tarefa de reunir pessoal em prol de uma causa social.</h2>
-							</div>
-							<div class="c-cardPodcast__link">
-								<span class="c-linkArrow">
-									<img src="media/img/assets/arrow_right_g.png" alt="Saiba mais">
-								</span>
-							</div>
-						</a>
-					</div>
-					<div class="swiper-slide">
-						<a href="#" class="c-cardPodcast">
-							<div class="c-cardPodcast__figure u-aspectRatio --ratio-3-2">
-								<img src="media/img/content/podcast_1.png" alt="Título do Podcast">
-							</div>
-							<div class="c-cardPodcast__description">
-								<h2>Neste episódio a tarefa de reunir pessoal em prol de uma causa social.</h2>
-							</div>
-							<div class="c-cardPodcast__link">
-								<span class="c-linkArrow">
-									<img src="media/img/assets/arrow_right_g.png" alt="Saiba mais">
-								</span>
-							</div>
-						</a>
-					</div>
-					<div class="swiper-slide">
-						<a href="#" class="c-cardPodcast">
-							<div class="c-cardPodcast__figure u-aspectRatio --ratio-3-2">
-								<img src="media/img/content/podcast_1.png" alt="Título do Podcast">
-							</div>
-							<div class="c-cardPodcast__description">
-								<h2>Neste episódio a tarefa de reunir pessoal em prol de uma causa social.</h2>
-							</div>
-							<div class="c-cardPodcast__link">
-								<span class="c-linkArrow">
-									<img src="media/img/assets/arrow_right_g.png" alt="Saiba mais">
-								</span>
-							</div>
-						</a>
-					</div>
-					<div class="swiper-slide">
-						<a href="#" class="c-cardPodcast">
-							<div class="c-cardPodcast__figure u-aspectRatio --ratio-3-2">
-								<img src="media/img/content/podcast_1.png" alt="Título do Podcast">
-							</div>
-							<div class="c-cardPodcast__description">
-								<h2>Neste episódio a tarefa de reunir pessoal em prol de uma causa social.</h2>
-							</div>
-							<div class="c-cardPodcast__link">
-								<span class="c-linkArrow">
-									<img src="media/img/assets/arrow_right_g.png" alt="Saiba mais">
-								</span>
-							</div>
-						</a>
-					</div>
-				</div>
 			</div>
 		</div>
 	</section>
