@@ -17,8 +17,8 @@
 					<li class="c-form__field u-fw100 --btn">
 						<button class="c-btn --white">Entrar</button>
 					</li>
-					<li class="c-form__field u-fw100">
-						<p><a href="#">Esqueci a senha</a></p>
+					<li class="c-form__field u-fw100 --recSenhaLink">
+						<p><a href="#modal-rec-senha" class="js-openModal">Esqueci a senha</a></p>
 					</li>
 				</ul>
 			</form>
