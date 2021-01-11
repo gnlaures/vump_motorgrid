@@ -48,6 +48,10 @@
 			$file = 'page_gridPost.php';
 			$title_page = 'Notícias - '.$title;
 			break;
+		case 'grid':
+			$file = 'page_gridPost_modelo.php';
+			$title_page = 'Grid Notícias - '.$title;
+			break;
 		case 'sobre':
 			$file = 'page_sobre.php';
 			$title_page = 'Sobre - '.$title;
