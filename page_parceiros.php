@@ -15,6 +15,7 @@
 					<li><img src="media/img/content/parceiros/audi.png" alt="Audi"></li>
 					<li><img src="media/img/content/parceiros/mcLaren.png" alt="McLaren"></li>
 					<li><img src="media/img/content/parceiros/frattina.png" alt="Fratiina"></li>
+                    <li class="u-fw100"><img src="media/img/content/parceiros/driveSelect.png" alt="Drive Select"></li>
 				</ul>
 			</div>
 		</div>

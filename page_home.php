@@ -176,7 +176,7 @@
 		</div>
 	</section>
 
-	<section class="s-nextEvents">
+	<section class="s-nextEvents" id="eventos">
 		<div class="s-nextEvents__top">
 			<a href="#" class="u-iconWithCaption --jcfe --icon10 top__link">
 				<span><strong>Veja todos</strong> os eventos</span>
@@ -309,6 +309,23 @@
 			</div>
 		</div>
 	</section>
+
+    <section class="s-instagram">
+        <div class="u-container">
+            <div class="s-instagram__head">
+                <h1>Últimas do <span>Instagram</span></h1>
+                <a href="#">SIGA <span>@motorgridbrasil</span></a>
+            </div>
+            <div class="s-instagram__content">
+                <ul class="c-responsiveGrid" data-maxw-breaks="600" data-maxw-cols="2" data-cols-init="4">
+                    <li><a href="#" class="u-aspectRatio --ratio-1-1"><img src="https://via.placeholder.com/350x350"></a></li>
+                    <li><a href="#" class="u-aspectRatio --ratio-1-1"><img src="https://via.placeholder.com/350x350"></a></li>
+                    <li><a href="#" class="u-aspectRatio --ratio-1-1"><img src="https://via.placeholder.com/350x350"></a></li>
+                    <li><a href="#" class="u-aspectRatio --ratio-1-1"><img src="https://via.placeholder.com/350x350"></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
 

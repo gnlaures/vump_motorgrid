@@ -77,6 +77,61 @@
 			</div>
 		</div>
 	</section>
+    <section class="s-lastPosts">
+        <div class="u-container">
+            <div class="s-lastPosts__head">
+                <h1>Mais sobre o <span>assunto</span></h1>
+            </div>
+            <div class="s-lastPosts__swiper swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="#" class="c-cardPost">
+                            <figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
+                                <img src="media/img/content/post1.png" alt="Título do post">
+                            </figure>
+                            <div class="c-cardPost__title">
+                                <h2>McLaren trabalha em uma solução brilhante para salvar o motor a combustão</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="c-cardPost">
+                            <figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
+                                <img src="media/img/content/post2.png" alt="Título do post">
+                            </figure>
+                            <div class="c-cardPost__title">
+                                <h2>Novo Porsche 911 Turbo S tem 650 cavalos, ele já tem preço aqui no Brasil e você poderá encomenda-lo em breve</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="c-cardPost">
+                            <figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
+                                <img src="media/img/content/post3.png" alt="Título do post">
+                            </figure>
+                            <div class="c-cardPost__title">
+                                <h2>Loja da McLaren no Brasil supera Oriente Médio e recebe o prêmio de Retailer of the Year 2019</h2>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="#" class="c-cardPost">
+                            <figure class="c-cardPost__figure u-aspectRatio --ratio-4-3">
+                                <img src="media/img/content/post3.png" alt="Título do post">
+                            </figure>
+                            <div class="c-cardPost__title">
+                                <h2>Loja da McLaren no Brasil supera Oriente Médio e recebe o prêmio de Retailer of the Year 2019</h2>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="s-lastPosts__controls">
+                <div class="swiper-button-prev --white"></div>
+                <div class="swiper-button-next --white"></div>
+            </div>
+        </div>
+    </section>
 	<section class="s-podcasts">
 		<div class="u-container">
 			<div class="s-podcasts__header">

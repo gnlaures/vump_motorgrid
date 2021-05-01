@@ -6,7 +6,7 @@
 		<div class="m-defaultModal__content">
 			<div class="conviteForm">
 				<h1>Convide um amigo</h1>
-				<p>Esta indicação não garante a entrada automática para o clube Motorgrid. O convidado será avaliado pelos critérios internos e convidado se estiver dentro do perfil do clube</p>
+				<p>Esta indicação não garante a entrada automática para o clube Motorgrid. convidado será avaliado pelos critérios internos e convidado se estiver dentro do perfil do clube</p>
 				<form action="#" class="c-form" id="formConvite">
 					<ul class="c-form__fieldsHero">
 						<li class="c-form__field u-fw100">

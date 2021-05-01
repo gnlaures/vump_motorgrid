@@ -1,22 +1,25 @@
 <main class="l-pageContent --inner">
-	<section class="s-defaultInnerSection s-gridPost s-projects">
+	<section class="s-defaultInnerSection s-gridPost__2 s-projects">
 		<div class="u-container">
 			<header class="s-defaultInnerSection__header">
 				<h1>Projects</h1>
 			</header>
 			<div class="s-defaultInnerSection__content">
-				<ul>
+                <ul class="c-responsiveGrid" data-maxw-breaks="1070" data-maxw-cols="1" data-cols-init="2">
 					<li>
 						<div class="c-cardPostHorizontal">
 							<a href="single" class="c-cardPostHorizontal__head">
 								<h2>Nosso maior projeto é estar incentivando cada vez o meio automotivo no país.</h2>
+                                <span class="date">April 13, 2020</span>
 							</a>
 							<div class="c-cardPostHorizontal__content">
 								<a href="single" class="c-cardPostHorizontal__figure">
 									<img src="media/img/content/post1.png" alt="Título do post">
 								</a>
 								<div class="c-cardPostHorizontal__resume">
-									<p>Criado em 2013, nós sempre buscamos unir pessoas com interesses em comum, mas, mantendo sempre nossos princípios.</p>
+									<p>Todos sabemos que a ordem mundial é trabalhar na eletrificação dos carros. Isso é algo que se tornou realidade de uma forma muito rápida, muito mais do que esperávamos. Os amantes de carros esportivos estão cada vez mais assustados e sempre a espera de alguma notícia animadora... pois é... a McLaren decidiu alegrar sua quarentena.</p>
+                                    <p>O site AUTOCAR entrevistou o Diretor de Operações da McLaren, Jens Ludmann, que relatou que a montadora britânica está nos estágios iniciais no desenvolvimento de um combustível sintético como alternativa à eletricidade, resumindo, os motores a combustão podem permanecer vivos e simplesmente funcionar com esse ``óleo limpo``.</p>
+                                    <p><a href="#" class="readMore">veja mais</a></p>
 									<span class="u-blockSpace"></span>
 								</div>
 							</div>
@@ -26,13 +29,16 @@
 						<div class="c-cardPostHorizontal">
 							<a href="single" class="c-cardPostHorizontal__head">
 								<h2>Nosso maior projeto é estar incentivando cada vez o meio automotivo no país.</h2>
+                                <span class="date">April 13, 2020</span>
 							</a>
 							<div class="c-cardPostHorizontal__content">
 								<a href="single" class="c-cardPostHorizontal__figure">
 									<img src="media/img/content/post1.png" alt="Título do post">
 								</a>
 								<div class="c-cardPostHorizontal__resume">
-									<p>Criado em 2013, nós sempre buscamos unir pessoas com interesses em comum, mas, mantendo sempre nossos princípios.</p>
+									<p>Todos sabemos que a ordem mundial é trabalhar na eletrificação dos carros. Isso é algo que se tornou realidade de uma forma muito rápida, muito mais do que esperávamos. Os amantes de carros esportivos estão cada vez mais assustados e sempre a espera de alguma notícia animadora... pois é... a McLaren decidiu alegrar sua quarentena.</p>
+                                    <p>O site AUTOCAR entrevistou o Diretor de Operações da McLaren, Jens Ludmann, que relatou que a montadora britânica está nos estágios iniciais no desenvolvimento de um combustível sintético como alternativa à eletricidade, resumindo, os motores a combustão podem permanecer vivos e simplesmente funcionar com esse ``óleo limpo``.</p>
+                                    <p><a href="#" class="readMore">veja mais</a></p>
 									<span class="u-blockSpace"></span>
 								</div>
 							</div>
@@ -42,13 +48,16 @@
 						<div class="c-cardPostHorizontal">
 							<a href="single" class="c-cardPostHorizontal__head">
 								<h2>Nosso maior projeto é estar incentivando cada vez o meio automotivo no país.</h2>
+                                <span class="date">April 13, 2020</span>
 							</a>
 							<div class="c-cardPostHorizontal__content">
 								<a href="single" class="c-cardPostHorizontal__figure">
 									<img src="media/img/content/post1.png" alt="Título do post">
 								</a>
 								<div class="c-cardPostHorizontal__resume">
-									<p>Criado em 2013, nós sempre buscamos unir pessoas com interesses em comum, mas, mantendo sempre nossos princípios.</p>
+									<p>Todos sabemos que a ordem mundial é trabalhar na eletrificação dos carros. Isso é algo que se tornou realidade de uma forma muito rápida, muito mais do que esperávamos. Os amantes de carros esportivos estão cada vez mais assustados e sempre a espera de alguma notícia animadora... pois é... a McLaren decidiu alegrar sua quarentena.</p>
+                                    <p>O site AUTOCAR entrevistou o Diretor de Operações da McLaren, Jens Ludmann, que relatou que a montadora britânica está nos estágios iniciais no desenvolvimento de um combustível sintético como alternativa à eletricidade, resumindo, os motores a combustão podem permanecer vivos e simplesmente funcionar com esse ``óleo limpo``.</p>
+                                    <p><a href="#" class="readMore">veja mais</a></p>
 									<span class="u-blockSpace"></span>
 								</div>
 							</div>
@@ -58,13 +67,16 @@
 						<div class="c-cardPostHorizontal">
 							<a href="single" class="c-cardPostHorizontal__head">
 								<h2>Nosso maior projeto é estar incentivando cada vez o meio automotivo no país.</h2>
+                                <span class="date">April 13, 2020</span>
 							</a>
 							<div class="c-cardPostHorizontal__content">
 								<a href="single" class="c-cardPostHorizontal__figure">
 									<img src="media/img/content/post1.png" alt="Título do post">
 								</a>
 								<div class="c-cardPostHorizontal__resume">
-									<p>Criado em 2013, nós sempre buscamos unir pessoas com interesses em comum, mas, mantendo sempre nossos princípios.</p>
+									<p>Todos sabemos que a ordem mundial é trabalhar na eletrificação dos carros. Isso é algo que se tornou realidade de uma forma muito rápida, muito mais do que esperávamos. Os amantes de carros esportivos estão cada vez mais assustados e sempre a espera de alguma notícia animadora... pois é... a McLaren decidiu alegrar sua quarentena.</p>
+                                    <p>O site AUTOCAR entrevistou o Diretor de Operações da McLaren, Jens Ludmann, que relatou que a montadora britânica está nos estágios iniciais no desenvolvimento de um combustível sintético como alternativa à eletricidade, resumindo, os motores a combustão podem permanecer vivos e simplesmente funcionar com esse ``óleo limpo``.</p>
+                                    <p><a href="#" class="readMore">veja mais</a></p>
 									<span class="u-blockSpace"></span>
 								</div>
 							</div>
